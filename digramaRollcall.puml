@@ -1,0 +1,92 @@
+@startuml
+set namespaceSeparator ::
+
+class "rollcall::aulaAlu.dart::AulaAlu" {
+  +String recLogin
+  +String recAula
+  +String recNome
+  +_AulaAluState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "rollcall::aulaAlu.dart::AulaAlu"
+
+class "rollcall::aulaAlu.dart::_AulaAluState" {
+  +Timer reload
+  +String dProfessor
+  +Position? aPos
+  +void initState()
+  +Future<void> conexao()
+  +Future<void> responde()
+  +Future<Position> Posicao()
+  +Widget build()
+}
+
+"rollcall::aulaAlu.dart::_AulaAluState" o-- "dart::async::Timer"
+"rollcall::aulaAlu.dart::_AulaAluState" o-- "geolocator_platform_interface::src::models::position.dart::Position"
+"flutter::src::widgets::framework.dart::State" <|-- "rollcall::aulaAlu.dart::_AulaAluState"
+
+class "rollcall::aulaProf.dart::AulaProf" {
+  +String recLogin
+  +String recAula
+  +String recNome
+  +_AulaProfState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "rollcall::aulaProf.dart::AulaProf"
+
+class "rollcall::aulaProf.dart::_AulaProfState" {
+  +String aviso
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "rollcall::aulaProf.dart::_AulaProfState"
+
+class "rollcall::main.dart::RollCall" {
+  +_RollCallState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "rollcall::main.dart::RollCall"
+
+class "rollcall::main.dart::_RollCallState" {
+  +TextEditingController usuario
+  +TextEditingController senha
+  +String erro
+  +void Errado()
+  +Widget build()
+}
+
+"rollcall::main.dart::_RollCallState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"flutter::src::widgets::framework.dart::State" <|-- "rollcall::main.dart::_RollCallState"
+
+class "rollcall::telaAluno.dart::telaAluno" {
+  +String recebido
+  +_telaAlunoState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "rollcall::telaAluno.dart::telaAluno"
+
+class "rollcall::telaAluno.dart::_telaAlunoState" {
+  +void initState()
+  +Future<void> conexao()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "rollcall::telaAluno.dart::_telaAlunoState"
+
+class "rollcall::telaProfessor.dart::telaProfessor" {
+  +String recebido
+  +_telaProfessorState createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "rollcall::telaProfessor.dart::telaProfessor"
+
+class "rollcall::telaProfessor.dart::_telaProfessorState" {
+  +void initState()
+  +Future<void> conexao()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "rollcall::telaProfessor.dart::_telaProfessorState"
+
+
+@enduml
