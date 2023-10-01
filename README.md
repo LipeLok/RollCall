@@ -1,16 +1,14 @@
-# rollcall
+# RollCall
 
-A new Flutter project.
+Projeto de Trabalho de Graduação para a Faculdade FATEC Itapetininga no ano de 2022.
 
-## Getting Started
+Feito por mim: Felipe Souza Barbosa em conjunto ao meu colega de trabalho, Valmir Aparecido Barra.
 
-This project is a starting point for a Flutter application.
+# Sobre o RollCall
 
-A few resources to get you started if this is your first Flutter project:
+É um projeto cuja a finalidade é realizar chamadas discentes de maneira automatica. O funcionamento se dá através de um aplicativo, onde o professor com o seu LogIn,
+habilita a realização de chamadas. Então o aluno, em seu LogIn, pode entrar na matéria em questão, e realizar a confirmação de presença.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+O sistema realiza consulta de localização para confirmar que o aluno está realmente na área do professor.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Muito Obrigado por entrar em meu projeto. Qualquer dúvida ou informação sinta-se livre para entrar em contato.
